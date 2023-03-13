@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework8</title>
+</head>
+
+<body>
+    <p class="super_element">Hello!</p>
+
+    <img src="https://placeimg.com/50/50/animals" alt="">
+    <img src="https://placeimg.com/50/50/arch" alt="">
+    <img src="https://placeimg.com/50/50/nature" alt="">
+    <img src="https://placeimg.com/50/50/people" alt="">
+    <img src="https://placeimg.com/50/50/tech" alt="">
+    <img src="https://placeimg.com/50/50/tech/grayscale" alt="">
+    <img src="https://placeimg.com/50/50/tech/sepia" alt="">
+
+    <br>
+
+    <button>Кнопка</button>
+    <button class="element_super">Кнопка с классом btn</button>
+    <button>Кнопка</button>
+
+    <br>
+
+    <textarea></textarea>
+
+    <br>
+
+    <ul>
+        <li>
+            <button>Кнопка 1</button>
+        </li>
+        <li>
+            <button>Кнопка 2</button>
+        </li>
+        <li>
+            <button>Кнопка 3</button>
+        </li>
+        <li>
+            <button>Кнопка 4</button>
+        </li>
+    </ul>
+
+    <script>
+
+        // 1. Необходимо вывести сообщение в консоль "все теги прогрузились", когда все теги будут созданы браузером.
+
+        document.addEventListener('DOMContentLoaded', () =>
+            console.log('все теги прогрузились'));
+
+        // 2. Необходимо вывести сообщение в консоль "страница загрузилась", когда все ресурсы страницы будут загружены.
+
+        windows.addEventListener('load', () =>
+            console.log('страница загрузилась'));
+
+        // 3. При клике на какой-либо тег на странице в консоль должно выводиться сообщение наподобие:
+        // - Класс "super_element" присутствует в элементе "div". 
+        // - сообщение должно определять присутствует или отсутствует класс "super_element"
+        // - у элемента, а также выводить в нижнем регистре верный тег в данной строке, по
+        // - которому был совершен клик.
+        // - Необходимо использовать делегирование.
+
+        document.addEventListener('click', (event) => {
+            const target = event.target;
+            if (target.tagName.toLowerCase() !== 'html') {
+                const hasSuperElement = target.classList.contains('super_element');
+                console.log(`Класс "${hasSuperElement ? 'super_element' : 'btn'}" присутствует в элементе "${target.tagName.toLowerCase()}".`);
+            }
+        });
+
+
+
+        // 4. Сделайте, чтобы при наведении на textarea в консоли появлялось сообщение: "Вы навели на textarea."
+
+        const textarea = document.querySelector('textarea');
+        textarea.addEventListener('mouseover', () => {
+            console.log('Вы навели на textarea.');
+        });
+
+        // 5. Необходимо повесить событие клика на тег ul. В обработчике события в консоль необходимо выводить текст, который записан внутри элемента кнопки, по которой был произведен клик. Если клик был не по кнопке, то ничего выводить не нужно. Необходимо использовать делегирование.
+
+        document.querySelector('ul').addEventListener('click', event => {
+            const tagElement = event.target.tagName.toLowerCase();
+            if (tagElement == 'button') console.log(event.target.textContent);
+        });
+        // 6. Вопрос: Почему в console.log пишется сначала текст из 5 задания и только потом выводится текст из 3 задания, если мы кликаем по кнопкам в ul? Ответ необходимо написать здесь же, под этим комментарием, своими словами.
+
+        //В console.log пишется сначала текст из 5 упражнения,потому что в нем идет обращение непосредственно к тегу `ul` в html, а  в  3 упражнение нужно "проверять полностью документ" на наличие класса "super_element", ответ отражается через const target, созданную внутри функции.Браузер обрабатывает снизу вверх.
+
+
+
+        // 7. С помощью JS необходимо изменить цвет заднего фона каждого второго тега li.
+
+        const liElement = document.querySelectorAll('liElement');
+        for (let i = 0; i < liElement.length; i++) {
+            if (i % 2 !== 0) liElement[i].style.backgroundColor = 'blue';
+        }
+
+    </script>
+</body>
+
+</html>
