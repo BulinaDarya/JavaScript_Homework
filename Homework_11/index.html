@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Homework11</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+      integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="header">
+      <div class="container">
+        <div class="leftHeader">
+          <img src="img/img/logo.png" alt="logo" />
+          <img class="searchIcon" src="img/img/glass.png" alt="glass" />
+        </div>
+
+        <div class="rightHeader">
+          <label for="header__check"><img src="img/img/menu.png" alt="menu" /></label>
+        
+          <img class="userIcon" src="img/img/ava.png" alt="ava" />
+
+          <input class="header__checkbox" id="header__check" type="checkbox">
+            <div class="mobile-menu">
+                <h3 class="mobile-menu__heading">MENU</h3>
+                <div class="mobile-menu__box">
+                    <div class="mobile-menu__item">
+                        <p class="mobile-menu__title">MAN</p>
+                        <ul class="mobile-menu__list">
+                            <li><p class="mobile-menu__link">Accessories</p></li>
+                            <li><p class="mobile-menu__link">Bags</p></li>
+                            <li><p class="mobile-menu__link">Denim</p></li>
+                            <li><p class="mobile-menu__link">T-Shirts</p></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__item">
+                        <p class="mobile-menu__title">WOMAN</p>
+                        <ul class="mobile-menu__list">
+                            <li><p class="mobile-menu__link">Accessories</p></li>
+                            <li><p class="mobile-menu__link">Jackets & Coats</p></li>
+                            <li><p class="mobile-menu__link">Polos</p></li>
+                            <li><p class="mobile-menu__link">T-Shirts</p></li>
+                            <li><p class="mobile-menu__link">Shirts</p></li>
+                        </ul>
+                    </div>
+                    <div class="mobile-menu__item">
+                        <p class="mobile-menu__title">KIDS</p>
+                        <ul class="mobile-menu__list">
+                            <li><p class="mobile-menu__link">Accessories</p></li>
+                            <li><p class="mobile-menu__link">Jackets & Coats</p></li>
+                            <li><p class="mobile-menu__link">Polos</p></li>
+                            <li><p class="mobile-menu__link">T-Shirts</p></li>
+                            <li><p class="mobile-menu__link">Shirts</p></li>
+                            <li><p class="mobile-menu__link">Bags</p></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+          <span class="cartIconWrap">
+            <img class="cartIcon" src="img/img/basket.png" alt="basket" />
+            <span>0</span>
+          </span>
+
+          <div class="basket hidden">
+            <div class="basketRow basketHeader">
+              <div>Название товара</div>
+              <div>Количество</div>
+              <div>Цена за шт.</div>
+              <div>Итого</div>
+              <div>Удалить</div>
+            </div>
+            <div class="basketList"></div>
+            <div class="basketTotal">
+              Товаров в корзине на сумму:
+              <span class="basketTotalValue">0</span> $
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main center">
+      <div class="main_photo">
+          <img src="img/img/man_big.png" alt="man_big">
+      </div>
+      <div class="title">
+          <div class="brand">
+          <h1 class="brand1">THE BRAND</h1>
+          <h2 class="brand2">OF LUXERIOUS <span class="pink">FASHION</span></h2>
+          </div>
+      </div>
+  </div>
+  <div class="catalog_items center">
+      <div class="item center">
+              <img src="img/img/woman3.png" alt="woman3">
+          <div class="text">
+              <h2 class="item_text">30% OFF</h2>
+              <h2 class="item_text2">FOR WOMEN</h2>
+          </div>
+      </div>
+      <div class="item">
+              <img src="img/img/man4.png" alt="man4">
+          <div class="text">
+              <h2 class="item_text">HOT DEAL</h2>
+              <h2 class="item_text2">FOR MEN</h2>
+          </div>
+      </div>
+      <div class="item">
+              <img src="img/img/child.png" alt="child">
+          <div class="text">
+              <h2 class="item_text">NEW ARRIVALS</h2>
+              <h2 class="item_text2">FOR KIDS</h2>
+          </div>
+      </div>
+      <div class="item_acces">
+              <img src="img/img/fon5.png" alt="fon5">
+          <div class="text">
+              <h2 class="item_text">LUXIROUS & TRENDY</h2>
+              <h2 class="item_text2">ACCESORIES</h2>
+          </div>
+      </div>
+  </div>
+
+
+    <div class="featured container center">
+      <h2 class="featuredHeader">Fetured Items</h2>
+      <div class="featuredTitle">
+        Shop for items based on what we featured in this week
+      </div>
+
+      <div class="featuredItems"></div>
+
+      <div class="pagination">
+        
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+        <a href="#">6</a>
+        
+      </div>
+    </div>
+
+    <div class="button">
+      <button class="button_text">Browse All Product</button>
+      </div>
+
+    <div class="services">
+      <div class="container">
+        <div class="serivceUnit">
+          <img src="img/svg/delivery.svg" alt="delivery" />
+          <div class="servicesTitle">Free Delivery</div>
+          <div class="servicesText">
+            Worldwide delivery on all. Authorit tively morph next-generation
+            innov tion with extensive models.
+          </div>
+        </div>
+
+        <div class="serivceUnit">
+          <img src="img/svg/discount.svg" alt="discount" />
+          <div class="servicesTitle">Sales & discounts</div>
+          <div class="servicesText">
+            Worldwide delivery on all. Authorit tively morph next-generation
+            innov tion with extensive models.
+          </div>
+        </div>
+
+        <div class="serivceUnit">
+          <img src="img/svg/assurance.svg" alt="assurance" />
+          <div class="servicesTitle">Quality assurance</div>
+          <div class="servicesText">
+            Worldwide delivery on all. Authorit tively morph next-generation
+            innov tion with extensive models.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="subscribe">
+      <div class="container">
+        <div class="subscribeLeft">
+          <img src="img/img/avatar.png" alt="avatar" />
+          <div class="subscribeUserText">
+            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, a pulvinar
+            purus condimentum“
+          </div>
+        </div>
+
+        <div class="subscribeRight">
+          <div class="subscribeTitle">SUBSCRIBE</div>
+          <div class="subscribeText">FOR OUR NEWLETTER AND PROMOTION</div>
+          <form action="" class="subscribeForm">
+            <input type="text" placeholder="Enter Your Email" />
+            <button>Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container">
+        <div class="footerLeft">&copy; 2021 Brand All Rights Reserved.</div>
+          
+        <div class="footerRight">
+          <a href="#">
+            <i class="fab fa-facebook-f"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-instagram"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-pinterest-p"></i>
+          </a>
+          <a href="#">
+            <i class="fab fa-twitter"></i>
+          </a>
+      
+        </div>
+      </div>
+    </div>
+
+    <script src="catalog.js"></script>
+    <script src="catalog_price.js"></script>
+  </body>
+</html>
